@@ -15,6 +15,8 @@ namespace JoliCode\Slack\Api\Model;
 
 class ObjsMessage
 {
+    protected $edited;
+
     /**
      * @var ObjsMessageAttachmentsItem[]|null
      */
@@ -181,6 +183,16 @@ class ObjsMessage
      * @var string|null
      */
     protected $username;
+
+    public function getEdited()
+    {
+        return $this->edited;
+    }
+
+    public function setEdited($edited)
+    {
+        $this->edited = $edited;
+    }
 
     /**
      * @return ObjsMessageAttachmentsItem[]|null
