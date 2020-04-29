@@ -193,6 +193,9 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         if (property_exists($data, 'username') && $data->{'username'} !== null) {
             $object->setUsername($data->{'username'});
         }
+        if (property_exists($data, 'edited') && $data->{'edited'} !== null) {
+            $object->setEdited($data->{'edited'});
+        }
 
         return $object;
     }
@@ -350,6 +353,9 @@ class ObjsMessageNormalizer implements DenormalizerInterface, NormalizerInterfac
         }
         if (null !== $object->getUsername()) {
             $data->{'username'} = $object->getUsername();
+        }
+        if (null !== $object->getEdited()) {
+            $data->{'edited'} = $object->getEdited();
         }
 
         return $data;
