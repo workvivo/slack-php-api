@@ -56,7 +56,7 @@ class ChatGetPermalink extends \Jane\OpenApiRuntime\Client\BaseEndpoint implemen
         $optionsResolver->setRequired([]);
         $optionsResolver->setDefaults([]);
         $optionsResolver->setAllowedTypes('token', ['string']);
-        $optionsResolver->setAllowedTypes('message_ts', ['float']);
+        $optionsResolver->setAllowedTypes('message_ts', ['string']);
         $optionsResolver->setAllowedTypes('channel', ['string']);
 
         return $optionsResolver;
